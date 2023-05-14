@@ -1,8 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
-import BillsToPay from "@screens/BillsToPay";
 import { useTheme } from 'styled-components';
-import Bills from '@screens/Bills';
+
+import BillsToPay from "@screens/BillsToPay";
+
+import BillsRoutes from '../BillsRoutes';
+import GroupsRoutes from '../GroupsRoutes';
 
 const Tab = createBottomTabNavigator();
 
@@ -11,6 +14,7 @@ export default function TabNavigator() {
 
 	return (
 		<Tab.Navigator
+			initialRouteName='billsToPay'
 			screenOptions={{
 				tabBarStyle: {
 					backgroundColor: theme.COLORS.GRAY_700,
@@ -31,7 +35,7 @@ export default function TabNavigator() {
 		>
 			<Tab.Screen
 				name="bills"
-				component={Bills}
+				component={BillsRoutes}
 				options={{
 					tabBarLabel: 'Contas',
 					tabBarIcon: ({ color, size }) => (
@@ -52,7 +56,7 @@ export default function TabNavigator() {
 			/>
 			<Tab.Screen
 				name="group"
-				component={BillsToPay}
+				component={GroupsRoutes}
 				options={{
 					tabBarLabel: 'Grupos',
 					tabBarIcon: ({ color, size }) => (
