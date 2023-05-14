@@ -1,12 +1,11 @@
 import { StatusBar } from 'react-native';
 import { ThemeProvider } from "styled-components/native";
-
-import theme from './src/theme';
 import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from '@expo-google-fonts/roboto';
 
-import BillsToPay from "@screens/BillsToPay";
 import Loading from '@components/Loading';
+import Router from './src/router';
 
+import theme from './src/theme';
 
 export default function App() {
   const [ fontsLoaded ] = useFonts({ Roboto_400Regular, Roboto_500Medium, Roboto_700Bold });
@@ -18,7 +17,7 @@ export default function App() {
           backgroundColor='transparent'
           translucent
         />
-      {fontsLoaded ? <BillsToPay /> : <Loading />}
+        { fontsLoaded ? <Router /> : <Loading /> }
       </ThemeProvider>
   );
 };
