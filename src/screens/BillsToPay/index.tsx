@@ -1,9 +1,11 @@
-import * as S from './styles';
+import { useEffect, useState } from 'react';
+import { FlatList } from 'react-native';
+
 import CardAmountInfo from '@components/CardAmountInfo';
 import CardHouseBills from '@components/CardHouseBills';
 import Header from '@components/Header';
-import { useEffect, useState } from 'react';
-import { FlatList } from 'react-native';
+
+import * as S from './styles';
 
 const HOUSE_BILLS = [
 	{
@@ -56,7 +58,7 @@ export default function BillsToPay() {
 
 	return (
 		<S.Container>
-			<Header />
+			<Header title='Contas a Pagar' />
 			<S.Content>
 				<S.CardResponsibility>
 					<S.SelectDate>
@@ -90,11 +92,18 @@ export default function BillsToPay() {
 					title='Total a pagar'
 					amount={12}
 				/>
+				<CardAmountInfo
+					title='Valor Individual'
+					amount={12}
+				/>
 				<FlatList
 					data={houseBills}
 					keyExtractor={(item) => item.id}
 					bounces={false}
 					showsVerticalScrollIndicator={false}
+					style={{
+						width: '100%',
+					}}
 					renderItem={({ item }) => (
 						<CardHouseBills
 							billName={item.billName}
