@@ -7,10 +7,11 @@ type CardHouseBillsType = {
 }
 
 export const Container = styled.View<CardHouseBillsType>`
-	width: 356px;
+	width: 100%;
 	height: 100px;
 	border-radius: 8px;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 
 	background-color: ${({ theme }) => theme.COLORS.GRAY_700};
 	border-left-width: 5px;
