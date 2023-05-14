@@ -1,6 +1,7 @@
-import * as S from './styles';
 import logoImg from '@assets/logo_login.png';
 import googleImg from '@assets/google-icon.png';
+
+import * as S from './styles';
 
 export default function SignIn() {
 	return (
