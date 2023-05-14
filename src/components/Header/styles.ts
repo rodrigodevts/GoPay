@@ -13,6 +13,7 @@ export const Container = styled.View`
 
 	margin-top: ${getStatusBarHeight()}px;
 	padding: 30px;
+	background-color: ${({ theme }) => theme.COLORS.GRAY_700};
 `;
 
 export const Title = styled.Text`
@@ -22,21 +23,58 @@ export const Title = styled.Text`
 	color: ${({ theme }) => theme.COLORS.WHITE};
 `;
 
-export const BackButton = styled(TouchableOpacity)`
+export const Button = styled(TouchableOpacity)`
 	position: absolute;
-	left: 24px;
+
 	width: 54px;
 	height: 34px;
-	border-radius: 50%;
 	padding-left: 10px;
+
+	border-radius: 50%;
 
 	align-items: center;
 	justify-content: center;
 `;
 
-export const Icon = styled(MaterialIcons).attrs({
+export const BackButton = styled(Button)`
+	left: 24px;
+`;
+
+export const NotificationButton = styled(Button)`
+	right: 24px;
+`;
+
+export const BackIcon = styled(MaterialIcons).attrs({
 	name: 'arrow-back-ios',
 	size: 24
 })`
+	color: ${({ theme }) => theme.COLORS.WHITE};
+`;
+
+export const NotificationIcon = styled(MaterialIcons).attrs({
+	name: 'notifications',
+	size: 30
+})`
+	color: ${({ theme }) => theme.COLORS.WHITE};
+`;
+
+export const Badge = styled.View`
+	width: 18px;
+	height: 18px;
+	border-radius: 9999px;
+
+	position: absolute;
+	top: 0px;
+	right: 8px;
+
+	background-color: ${({ theme }) => theme.COLORS.RED_400};
+
+	align-items: center;
+	justify-content: center;
+`;
+
+export const AmountNotification = styled.Text`
+	font-size: 12px;
+	font-weight: 700;
 	color: ${({ theme }) => theme.COLORS.WHITE};
 `;
