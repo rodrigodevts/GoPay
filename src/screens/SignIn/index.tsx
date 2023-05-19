@@ -11,11 +11,11 @@ export default function SignIn() {
 			/>
 			<S.TitleWrapper>
 				<S.Title>Evite confusão na {'\n'}casa</S.Title>
-				<S.SubTitle>Defina os lembretes e Organize {'\n'}os pagamentos da casa</S.SubTitle>
+				<S.SubTitle>Defina os lembretes e organize {'\n'}os pagamentos da casa</S.SubTitle>
 			</S.TitleWrapper>
 			<S.Footer>
 				<S.SignInWrapper>
-					<S.SubTitle>Faça seu login com {'\n'}uma das contas abaixo</S.SubTitle>
+					<S.SubTitle>Faça seu login com {'\n'}uma conta Google (G-mail)</S.SubTitle>
 					<S.SocialButton>
 						<S.SocialIcon
 							source={googleImg}

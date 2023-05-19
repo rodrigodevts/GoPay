@@ -4,6 +4,7 @@ export default {
 
 		PINK_300: '#9F7AEA',
 
+		GRAY_850: 'rgba(26, 32, 44, 0.83)',
 		GRAY_800: '#1A202C',
 		GRAY_700: '#2D3748',
 		GRAY_600: '#4A5568',

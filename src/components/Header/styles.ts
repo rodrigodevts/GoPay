@@ -2,6 +2,7 @@ import styled from "styled-components/native";
 import { MaterialIcons } from '@expo/vector-icons';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { TouchableOpacity } from "react-native";
+import { Modal } from "react-native";
 
 export const Container = styled.View`
 	width: 100%;
@@ -77,4 +78,64 @@ export const AmountNotification = styled.Text`
 	font-size: 12px;
 	font-weight: 700;
 	color: ${({ theme }) => theme.COLORS.WHITE};
+`;
+
+export const ModalNotification = styled(Modal)`
+	flex: 1;
+`;
+
+export const ModalNotificationContainer = styled.View`
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	background-color: 'rgba(0, 0, 0, 0.5)';
+`;
+
+export const ModalNotificationContent = styled.View`
+	width: 85%;
+	height: 65%;
+	padding: 24px;
+	border-radius: 8px;
+	background-color: ${({ theme }) => theme.COLORS.GRAY_700};
+`;
+
+export const ModalHeader = styled.View`
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+`;
+
+export const ModalTitle = styled.Text`
+	font-size: 18px;
+	font-weight: 500;
+	color: ${({ theme }) => theme.COLORS.WHITE};
+`;
+
+export const Notification = styled.View`
+	width: 100%;
+	padding: 10px;
+	gap: 14px;
+	border-radius: 5px;
+
+	background-color: ${({ theme }) => theme.COLORS.GRAY_850};
+`;
+
+export const NotificationTitle = styled.Text`
+	font-size: 16px;
+	font-weight: 500;
+	color: ${({ theme }) => theme.COLORS.GRAY_50};
+`;
+
+export const NotificationDate = styled.Text`
+	font-size: 12px;
+	font-weight: 500;
+	color: ${({ theme }) => theme.COLORS.GRAY_300};
+`;
+
+export const NotificationDescription = styled.Text`
+	font-size: 14px;
+	font-weight: 300;
+	color: ${({ theme }) => theme.COLORS.GRAY_300};
 `;
